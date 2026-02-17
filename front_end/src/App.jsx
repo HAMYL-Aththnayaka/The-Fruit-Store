@@ -1,10 +1,9 @@
 import React from 'react';
-
-const App= ()=>{
-return (
-  <div
-  className='bg-red-500'>App</div>
-);
-}
+import Navbar from './compenets/Navbar/navbar';
+const App= ()=><>
+  <main className='overflow-x-hidden'>
+    <Navbar />
+  </main>
+</>
 
 export default App;
