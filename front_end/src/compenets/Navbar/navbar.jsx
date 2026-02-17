@@ -1,17 +1,56 @@
-import {React} from 'react';
+import React from 'react';
+import { FaLeaf } from 'react-icons/fa';
+import {MdOutlineShoppingCart,MdMenu} from 'react-icons/md';
 
-const Navbar=()=>{
+const navBarMenu = [
+  { id: 1, title: 'Home', link: '/' },
+  { id: 2, title: 'Products', link: '#' },
+  { id: 3, title: 'About', link: '#' },
+  { id: 4, title: 'Shop', link: '#' },
+  { id: 5, title: 'Contacts', link: '#' }
+];
 
-    return (
-        <nav className ="">
-            <div className='container'>
-                <div>
-                    <p>Fruit</p>
-                </div>
-                {/*Menu Selection*/}
-            </div>
-        </nav>
-                 
-    );
-}
-export default Navbar
+const Navbar = () => {
+  return (
+    <nav>
+      {/* Container - Fixed typo 'justifyy-between' to 'justify-between' */}
+      <div className='container flex justify-between items-center py-4'>
+        
+        {/* Logo section */}
+        <div className='text-2xl flex items-center gap-2 font-bold uppercase'>
+          <p className='text-primary'>Fruit</p>
+          <p className='text-secondary'>Store</p>
+          <FaLeaf className='text-green-500' />
+        </div>
+
+        {/* Menu Selection */}
+        <div className='hidden md:block'>
+          <ul className='flex items-center gap-6 text-gray-600'>
+            {navBarMenu.map((menu) => (
+              <li key={menu.id}>
+                <a 
+                  href={menu.link} 
+                  className="inline-block py-1 px-3 hover:shadow-[0_3px_0_-1px_#ef4444] 
+                  font-semibold "
+                >
+                  {menu.title}
+                </a>
+              </li>
+            ))}
+            <button className='text-2xl hover:bg-primary
+            hover:text-white rounded-full p-2 duration-200'>
+                <MdOutlineShoppingCart/>
+            </button>
+          </ul>
+        </div>
+
+        {/*Mobile Hamburger menu section */}
+        <div>
+            <MdMenu/>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
