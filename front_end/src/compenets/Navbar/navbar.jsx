@@ -1,6 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { FaLeaf } from 'react-icons/fa';
 import {MdOutlineShoppingCart,MdMenu} from 'react-icons/md';
+
+import ResponsiveMenu from './ResponsiveMenu'
+
 
 const navBarMenu = [
   { id: 1, title: 'Home', link: '/' },
@@ -11,7 +14,8 @@ const navBarMenu = [
 ];
 
 const Navbar = () => {
-  return (
+    const [open ,setOpen] = useState(false);
+  return (<>
     <nav>
       {/* Container - Fixed typo 'justifyy-between' to 'justify-between' */}
       <div className='container flex justify-between items-center py-4'>
@@ -27,12 +31,12 @@ const Navbar = () => {
         <div className='hidden md:block'>
           <ul className='flex items-center gap-6 text-gray-600'>
             {navBarMenu.map((menu) => (
-              <li key={menu.id}>
+                <li key={menu.id}>
                 <a 
                   href={menu.link} 
                   className="inline-block py-1 px-3 hover:shadow-[0_3px_0_-1px_#ef4444] 
                   font-semibold "
-                >
+                  >
                   {menu.title}
                 </a>
               </li>
@@ -45,11 +49,18 @@ const Navbar = () => {
         </div>
 
         {/*Mobile Hamburger menu section */}
-        <div>
-            <MdMenu/>
+        <div className='md:hidden' onClick={()=>{
+            setOpen(!open);
+        }}>
+            <MdMenu className='text-4xl'/>
         </div>
       </div>
     </nav>
+
+            {/*mobile menu section */}
+            <ResponsiveMenu open={open}/>
+
+    </>
   );
 };
 
