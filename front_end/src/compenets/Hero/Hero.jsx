@@ -64,7 +64,11 @@ const Hero = () => {
         <div className='absolute top-14
           md:top-0 right-1/2 blur-sm opacity-80 rotate-[40deg]'>
           {/*Leaf Image */}
-          <img src={LeafPng} alt='' className='w-full md:max-w-[300px]' />
+          <motion.img
+          initial={{opacity:0 ,x:-200 ,rotate:75}}
+          animate={{opacity:1,x:0,rotate:0}}
+          duration={{duration:1 , delay:1.55}}
+          src={LeafPng} alt='' className='w-full md:max-w-[300px]' />
         </div>
       </div>
     </section>
