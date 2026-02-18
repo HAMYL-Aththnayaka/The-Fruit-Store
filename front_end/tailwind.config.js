@@ -6,24 +6,24 @@ export default {
   ],
   theme: {
     extend: {
-        colors:{
-            primary:'#de3c4d',
-            secondary:'#fb923c'
-        },
-        fontFamily:{
-            poppins:['Poppins','sans-serif'],
-            averia:["Averia Serif Libre","serif"],
-        },
-        container:{
-            center:true,
-            padding:{
-                Default:'1rem',
-                sm:  '2rem',
-                lg:'4rem',
-                xl:'5rem',
-                '2xl':'6rem',
-            }
-        },
+      colors: {
+        primary: '#de3c4d',
+        secondary: '#fb923c'
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        averia: ["Averia Serif Libre", "serif"],
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem', // Changed from 'Default' to uppercase 'DEFAULT'
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        }
+      },
     },
   },
   plugins: [],
