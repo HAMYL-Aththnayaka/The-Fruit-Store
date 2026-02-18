@@ -32,7 +32,7 @@ const Hero = () => {
 
         {/* Hero Image Section */}
         <div className='flex justify-center items-center'>
-            {/* Insert your <img> here */}
+          <img src={HeroImg}/>
         </div>
       </div>
     </section>
