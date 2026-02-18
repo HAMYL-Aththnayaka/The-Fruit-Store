@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import { FaLeaf } from 'react-icons/fa';
 import {MdOutlineShoppingCart,MdMenu} from 'react-icons/md';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FadeUp, FadeLeft, FadeRight } from '../../utility/animation';
 
 import ResponsiveMenu from './ResponsiveMenu'
 
@@ -18,7 +20,11 @@ const Navbar = () => {
   return (<>
     <nav>
       {/* Container - Fixed typo 'justifyy-between' to 'justify-between' */}
-      <div className='container flex justify-between items-center py-4'>
+      <motion.div 
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      
+      className='container flex justify-between items-center py-4'>
         
         {/* Logo section */}
         <div className='text-2xl flex items-center gap-2 font-bold uppercase'>
@@ -54,7 +60,7 @@ const Navbar = () => {
         }}>
             <MdMenu className='text-4xl'/>
         </div>
-      </div>
+      </motion.div>
     </nav>
 
             {/*mobile menu section */}
