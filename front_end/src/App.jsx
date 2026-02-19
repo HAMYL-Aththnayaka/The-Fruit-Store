@@ -5,6 +5,7 @@ import Menus from './compenets/Menus/Menus'
 import Banner  from './compenets/Banner/Banner.jsx'
 import Banner2  from './compenets/Banner/Banner2.jsx'
 import Banner3  from './compenets/Banner/Banner3.jsx'
+import Footer from './compenets/Footer/Footer.jsx'
 
 const App= ()=><>
   <main className='overflow-x-hidden'>
@@ -14,6 +15,7 @@ const App= ()=><>
     <Banner/>
     <Banner2/>
     <Banner3/>
+    <Footer/>
   </main>
 </>
 
