@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 const Banner2 = () => {
     return (
         <section className=''>
-            <div className="container grid grid-cols-1 md:grid-cols-2 py-14 gap-6 md:gap-0">
+            <div className="container grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 py-14 md:py-24">
 
 
                 {/* Banner Content */}
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center items-center">
                     <div className="text-center md:text-left space-y-4 lg:max-w-[400px]">
 
                         <motion.h1
@@ -77,7 +77,7 @@ const Banner2 = () => {
                         viewport={{ once: true }}
                         src={fruitPlate}
                         alt="Banner"
-                        className="w-[300px] md:max-w-[400px] h-full object-cover"
+                        className="w-[300px] md:max-w-[400px] h-full object-cover drop-shadow"
                     />
                 </div>
 
