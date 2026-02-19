@@ -1,13 +1,17 @@
 import React from 'react';
-
+import Fruit1 from '../../assets/fruits/apple.png'
+import Fruit3 from '../../assets/fruits/avocado.png'
+import Fruit4 from '../../assets/fruits/cherry.png'
+import Fruit2 from '../../assets/fruits/orange.png'
+//import FruitOne from '../../assets/fruits/apple.png'
 
 
 
 const MenuData = [
-  { id: 1, title: 'Red Apple', link: '/', price: '100.00' },
-  { id: 2, title: 'Fresh Oranges', link: '/', price: '50.00' },
-  { id: 3, title: 'Big Avocado', link: '/', price: '75.00' },
-  { id: 4, title: 'Sweet Cherries', link: '/', price: '100.00' },
+  { id: 1, title: 'Red Apple', link:Fruit1 ,price: '100.00' },
+  { id: 2, title: 'Fresh Oranges', link:Fruit2 , price: '50.00' },
+  { id: 3, title: 'Big Avocado', link: Fruit3, price: '75.00' },
+  { id: 4, title: 'Sweet Cherries', link:Fruit4, price: '100.00' },
 ];
 
 const Menus = () => {
@@ -28,17 +32,15 @@ const Menus = () => {
             >
               {/* Placeholder for Fruit Image */}
               <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center text-3xl">
-                {menu.id === 1 && "🍎"}
-                {menu.id === 2 && "🍊"}
-                {menu.id === 3 && "🥑"}
-                {menu.id === 4 && "🍒"}
+                { <img src={menu.link}/>}
+                
               </div>
 
               {/* Text Info */}
               <div className="text-center">
                 <h2 className="text-xl font-semibold text-gray-700">{menu.title}</h2>
                 <p className="text-lg font-bold text-secondary text-orange-500">
-                  ${menu.price}
+                  Rs {menu.price}
                 </p>
               </div>
             </div>
