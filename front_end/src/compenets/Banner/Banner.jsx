@@ -1,12 +1,13 @@
 import React from 'react';
 import BannerPng from '../../assets/banner-bg.jpg';
+import fruitPlate from '../../assets/fruit-plate2.png';
 import { IoBagHandleOutline } from 'react-icons/io5';
 import { FadeUp } from '../../utility/animation';
 import { motion } from 'framer-motion';
 
 const Banner = () => {
   return (
-    <section>
+    <section className='bg-secondary/10'>
       <div className="container grid grid-cols-1 md:grid-cols-2 py-14 gap-6 md:gap-0">
 
         {/* Banner Image */}
