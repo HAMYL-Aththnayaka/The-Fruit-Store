@@ -1,5 +1,4 @@
 import React from 'react';
-import BannerPng from '../../assets/banner-bg.jpg';
 import fruitPlate from '../../assets/fruit-plate2.png';
 import { IoBagHandleOutline } from 'react-icons/io5';
 import { FadeUp } from '../../utility/animation';
@@ -76,7 +75,7 @@ const Banner2 = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ type: 'spring', stiffness: 100, delay: 0.2 }}
                         viewport={{ once: true }}
-                        src={BannerPng}
+                        src={fruitPlate}
                         alt="Banner"
                         className="w-[300px] md:max-w-[400px] h-full object-cover"
                     />
