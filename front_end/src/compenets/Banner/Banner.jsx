@@ -1,6 +1,5 @@
 import React from 'react';
-import BannerPng from '../../assets/banner-bg.jpg';
-import fruitPlate from '../../assets/fruit-plate2.png';
+import BannerPng from '../../assets/fruits-splash.png';
 import { IoBagHandleOutline } from 'react-icons/io5';
 import { FadeUp } from '../../utility/animation';
 import { motion } from 'framer-motion';
@@ -19,7 +18,7 @@ const Banner = () => {
             viewport={{ once: true }}
             src={BannerPng}
             alt="Banner"
-            className="w-[300px] md:max-w-[400px] h-full object-cover"
+            className="w-[300px] md:max-w-[400px] h-full object-cover drop-shadow"
           />
         </div>
 

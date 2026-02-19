@@ -71,9 +71,9 @@ const Banner2 = () => {
                 {/* Banner Image */}
                 <div className="flex justify-center items-center">
                     <motion.img
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 100, delay: 0.2 }}
+                        initial={{ opacity: 0, x: 200,rotate:75 }}
+                        whileInView={{ opacity: 1, x:0,rotate:0 }}
+                        transition={{ duration:1,delay:0.2 }}
                         viewport={{ once: true }}
                         src={fruitPlate}
                         alt="Banner"
